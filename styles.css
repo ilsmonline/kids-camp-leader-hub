@@ -1,191 +1,406 @@
-const scheduleList = document.querySelector('#schedule-list');
-const tabs = document.querySelectorAll('.tab');
-const contactGrid = document.querySelector('#contact-grid');
-const activityList = document.querySelector('#activity-list');
-const menuGrid = document.querySelector('#menu-grid');
-const prayerGrid = document.querySelector('#prayer-grid');
-const scoreGrid = document.querySelector('#score-grid');
-const competitionGrid = document.querySelector('#competition-grid');
-const highRopesGrid = document.querySelector('#high-ropes-grid');
+:root {
+  --cream: #fff7df;
+  --sun: #d69c1b;
+  --coral: #ff7f61;
+  --rust: #9c3028;
+  --teal: #1c9589;
+  --green: #4ead81;
+  --sage: #abc59c;
+  --pink: #ec4e70;
+  --yellow: #fff56d;
+  --dark: #16111c;
+  --panel: #ffffff;
+  --bg: #fff7df;
+  --ink: #192620;
+  --muted: #657067;
+  --card: #ffffff;
+  --shadow: 0 18px 50px rgba(25, 38, 32, .15);
+  --radius: 24px;
+}* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+a { color: inherit; }
+button, a { -webkit-tap-highlight-color: rgba(236, 78, 112, .2); }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 4px solid rgba(236, 78, 112, .45); outline-offset: 3px; }
 
-function colorizeTeams(text) {
-  let output = text;
-  Object.entries(teamColors).forEach(([name, color]) => {
-    output = output.replace(new RegExp(`\\b${name}\\b`, 'g'), `<span class="team-pill" style="--team:${color}">${name}</span>`);
-  });
-  return output;
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: grid;
+  place-items: center;
+  padding: 48px 18px 84px;
+  overflow: hidden;
+  color: white;
+  background: radial-gradient(circle at 20% 15%, rgba(255,43,191,.85), transparent 28%), linear-gradient(140deg, #13abc1, #111827 72%);
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 80% 18%, rgba(255,241,118,.35), transparent 22%), radial-gradient(circle at 20% 90%, rgba(155,229,100,.28), transparent 25%);
+  opacity: .95;
+}
+.hero__content { position: relative; width: min(680px, 100%); text-align: center; }
+.theme-art { width: min(320px, 72vw); border-radius: 36px; box-shadow: var(--shadow); margin-bottom: 28px; }
+.eyebrow { margin: 0 0 8px; font-size: .78rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; color: var(--pink); }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(2.6rem, 12vw, 5.2rem); line-height: .85; margin-bottom: 18px; letter-spacing: -.06em; }
+.hero-copy { max-width: 560px; margin: 0 auto 28px; color: rgba(255,255,255,.88); font-size: 1.05rem; line-height: 1.55; }
+.hero-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.primary-action, .secondary-action, .button {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 999px; padding: 15px 22px; font-weight: 900; text-decoration: none; box-shadow: 0 16px 40px rgba(0,0,0,.18);
+}
+.primary-action, .button { background: var(--yellow); color: #1b1424; }
+.secondary-action { background: rgba(255,255,255,.14); color: white; border: 1px solid rgba(255,255,255,.35); }
+.button--accent { background: var(--pink); color: white; }
+.quick-nav { position: sticky; top: 0; z-index: 10; display: flex; gap: 8px; overflow-x: auto; padding: 12px 14px; background: rgba(255,248,237,.92); backdrop-filter: blur(14px); border-bottom: 1px solid rgba(20,15,24,.08); }
+.quick-nav a { white-space: nowrap; text-decoration: none; font-weight: 900; padding: 10px 14px; border-radius: 999px; background: white; }
+main { width: min(1060px, 100%); margin: 0 auto; padding: 22px 16px 68px; }
+.notice-card, .section { border-radius: var(--radius); background: var(--panel); box-shadow: var(--shadow); margin: 22px 0; }
+.notice-card { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 20px; padding: 24px; border: 3px solid var(--pink); }
+.notice-card h2 { margin-bottom: 8px; }
+.notice-card p { margin-bottom: 0; color: var(--muted); line-height: 1.5; }
+.section { padding: 26px; }
+.section--dark { background: var(--dark); color: white; }
+.section--dark .section-heading p { color: rgba(255,255,255,.75); }
+.section-heading { margin-bottom: 22px; }
+.section-heading h2 { font-size: clamp(2rem, 8vw, 3.8rem); line-height: .92; letter-spacing: -.06em; margin-bottom: 12px; }
+.section-heading > p:not(.eyebrow) { color: var(--muted); line-height: 1.55; max-width: 760px; }
+.tabs { display: flex; gap: 8px; overflow-x: auto; margin-bottom: 18px; }
+.tab { border: 0; padding: 11px 14px; border-radius: 999px; background: #eee7dc; color: var(--ink); font-weight: 900; white-space: nowrap; }
+.tab.is-active { background: var(--pink); color: white; }
+.schedule-list { display: grid; gap: 10px; }
+.schedule-item { display: grid; grid-template-columns: 92px 1fr; gap: 14px; align-items: start; padding: 14px; border-radius: 18px; background: #fff9f1; border: 1px solid rgba(21,17,24,.08); }
+.schedule-item time { font-weight: 900; color: #b41e86; }
+.schedule-item p { margin: 0; line-height: 1.4; }
+.team-pill { display: inline-block; margin: 0 2px; padding: 2px 8px; border-radius: 999px; background: var(--team); color: white; font-size: .8em; font-weight: 950; text-shadow: 0 1px 2px rgba(0,0,0,.22); }
+.team-pill[style*="Yellow"] { color: #1b1424; text-shadow: none; }
+.contact-grid, .resource-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.contact-card { border-radius: 22px; padding: 18px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); min-height: 235px; }
+.photo-placeholder { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 24px; margin-bottom: 14px; background: linear-gradient(135deg, rgba(236,78,112,.8), rgba(255,245,109,.75)); color: white; font-weight: 900; font-size: .78rem; }
+.contact-card .role { color: var(--yellow); font-weight: 900; margin-bottom: 10px; }
+.contact-card h3 { margin-bottom: 10px; color: white; }
+.contact-card a { color: white; font-weight: 900; font-size: 1.05rem; }
+.call-link { display: inline-flex; padding: 10px 12px; border-radius: 999px; background: rgba(255,255,255,.14); text-decoration: none; border: 1px solid rgba(255,255,255,.18); }
+.activity-intro { padding: 20px; border-radius: 22px; background: #16111c; color: white; margin-bottom: 16px; }
+.activity-intro h3 { color: var(--yellow); }
+.score-text { display: grid; gap: 1rem; }
+.score-text article { padding: 0 0 1rem; border-bottom: 1px solid rgba(255,255,255,.16); }
+.score-text article:last-child { border-bottom: 0; padding-bottom: 0; }
+.score-text strong { display: block; color: var(--yellow); margin-bottom: .35rem; font-size: 1.05rem; }
+.score-text p { color: rgba(255,255,255,.86); line-height: 1.55; margin: 0; }
+.activity-group { margin: 26px 0 0; }
+.activity-group__header { border-left: 8px solid var(--pink); padding-left: 14px; margin-bottom: 12px; }
+.activity-group__header h3 { font-size: 1.6rem; margin-bottom: 4px; }
+.activity-group__header p { color: var(--muted); line-height: 1.45; margin-bottom: 0; }
+.accordion { display: grid; gap: 12px; }
+.activity-card { border-radius: 22px; background: #fff9f1; border: 1px solid rgba(21,17,24,.08); overflow: hidden; }
+.activity-card summary { cursor: pointer; display: flex; justify-content: space-between; gap: 16px; padding: 18px; list-style: none; }
+.activity-card summary::-webkit-details-marker { display: none; }
+.activity-card strong { display: block; font-size: 1.1rem; }
+.activity-card small { display: block; margin-top: 4px; color: #9c1572; font-weight: 900; }
+.activity-card em { display: block; margin-top: 7px; color: var(--muted); font-style: normal; line-height: 1.35; }
+.activity-body { padding: 0 18px 20px; color: #332a3e; line-height: 1.55; }
+.activity-body p { margin-bottom: 12px; }
+.activity-body li { margin-bottom: 8px; }
+.chevron { font-size: 1.5rem; color: var(--pink); font-weight: 900; }
+.image-frame { display: block; overflow: auto; border-radius: 22px; background: #17131d; border: 1px solid rgba(21,17,24,.08); }
+.image-frame img { display: block; width: 100%; min-width: 760px; height: auto; }
+.menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.menu-day { border-radius: 24px; padding: 18px; background: linear-gradient(145deg, #ffffff, #fff1fb); border: 1px solid rgba(21,17,24,.08); }
+.menu-day h3 { margin-bottom: 14px; }
+.meal-card { border-top: 1px solid rgba(21,17,24,.1); padding-top: 13px; margin-top: 13px; }
+.meal-card__title { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; margin-bottom: 8px; }
+.meal-card__title strong { font-size: 1.1rem; }
+.meal-card__title span { color: #9c1572; font-weight: 850; font-size: .9rem; }
+.meal-card ul { margin: 0; padding-left: 18px; color: #332a3e; line-height: 1.45; }
+.section--prayer { background: #fff56d; }
+.prayer-preview { display: block; max-width: 340px; width: 100%; border-radius: 22px; margin: 0 auto 18px; box-shadow: var(--shadow); }
+.prayer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.prayer-button { display: grid; place-items: center; min-height: 70px; text-align: center; padding: 12px; border-radius: 18px; background: white; border: 5px solid #ff8a68; color: #ec4e70; text-decoration: none; font-weight: 950; text-transform: uppercase; }
+.resource-card { display: flex; min-height: 130px; flex-direction: column; justify-content: space-between; text-decoration: none; border-radius: 24px; padding: 18px; background: linear-gradient(145deg, white, #fff0fb); border: 1px solid rgba(21,17,24,.08); }
+.resource-card span { font-size: 1.12rem; font-weight: 950; }
+.resource-card small { color: #9c1572; font-weight: 900; }
+footer { padding: 30px 16px 46px; text-align: center; color: var(--muted); }
+footer a { font-weight: 900; }
+@media (max-width: 640px) {
+  .notice-card { grid-template-columns: 1fr; }
+  .section { padding: 22px 16px; }
+  .schedule-item { grid-template-columns: 78px 1fr; }
+  .image-frame img { min-width: 680px; }
+  .meal-card__title { display: block; }
 }
 
 
-function renderTeamBadge(team) {
-  const color = teamColors[team] || '#555';
-  return `<span class="team-pill matchup-pill" style="--team:${color}">${team}</span>`;
+.activity-intro__lead {
+  margin: -0.4rem 0 1rem;
+  color: var(--muted);
+  line-height: 1.55;
 }
 
-function renderMatchup(match) {
-  const parts = match.split(/\s+v(?:s\.)?\s+/i).map(part => part.trim()).filter(Boolean);
-  if (parts.length === 2) {
-    return `<div class="matchup-row">${renderTeamBadge(parts[0])}<span class="matchup-vs">vs.</span>${renderTeamBadge(parts[1])}</div>`;
-  }
-  return `<div class="matchup-row matchup-row--text">${colorizeTeams(match.replace(/\bv\b/i, 'vs.'))}</div>`;
+
+.competition-grid,
+.high-ropes-grid {
+  display: grid;
+  gap: 1rem;
 }
 
-function renderSchedule(day) {
-  scheduleList.innerHTML = schedule[day].map(([time, item]) => `
-    <article class="schedule-item">
-      <time>${time}</time>
-      <p>${colorizeTeams(item)}</p>
-    </article>
-  `).join('');
+.competition-day,
+.high-ropes-card {
+  background: var(--card);
+  border: 2px solid rgba(200, 88, 51, .24);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1rem;
 }
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
-    tabs.forEach(t => t.classList.remove('is-active'));
-    tab.classList.add('is-active');
-    renderSchedule(tab.dataset.day);
-  });
-});
-
-contactGrid.innerHTML = contacts.map(contact => {
-  const tel = contact.phone.replace(/[^0-9]/g, '');
-  const initials = contact.name.split(' ').map(part => part[0]).join('').slice(0, 2);
-  const photo = contact.photo
-    ? `<img class="contact-photo" src="${contact.photo}" alt="${contact.name}" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'), { className: 'photo-placeholder', textContent: '${initials}' }))" />`
-    : `<div class="photo-placeholder">${initials}</div>`;
-  return `
-    <article class="contact-card">
-      ${photo}
-      <p class="role">${contact.role}</p>
-      <h3>${contact.name}</h3>
-      <a class="call-link" href="tel:${tel}">Call ${contact.phone}</a>
-    </article>
-  `;
-}).join('');
-
-scoreGrid.innerHTML = activityIntro.map(item => `
-  <article>
-    <strong>${item.title}</strong>
-    <p>${item.body}</p>
-  </article>
-`).join('');
-
-activityList.innerHTML = activityGroups.map(group => `
-  <section class="activity-group">
-    <div class="activity-group__header">
-      <h3>${group.heading}</h3>
-      <p>${group.note}</p>
-    </div>
-    <div class="accordion">
-      ${group.items.map((activity, index) => `
-        <details class="activity-card">
-          <summary>
-            <span>
-              <strong>${activity.title}</strong>
-              <small>${activity.label}</small>
-              <em>${activity.quick}</em>
-            </span>
-            <span class="chevron">+</span>
-          </summary>
-          <div class="activity-body">
-            ${activity.paragraphs.map(p => `<p>${p}</p>`).join('')}
-            ${activity.bullets ? `<ul>${activity.bullets.map(b => `<li>${b}</li>`).join('')}</ul>` : ''}
-          </div>
-        </details>
-      `).join('')}
-    </div>
-  </section>
-`).join('');
-
-document.querySelectorAll('details.activity-card').forEach(detail => {
-  detail.addEventListener('toggle', () => {
-    if (!detail.open) return;
-    document.querySelectorAll('details.activity-card').forEach(other => {
-      if (other !== detail) other.removeAttribute('open');
-    });
-  });
-});
-
-competitionGrid.innerHTML = competitionSchedule.map(day => `
-  <article class="competition-day">
-    <header>
-      <p class="eyebrow">${day.day}</p>
-      <h3>Dreams & Team Comps</h3>
-    </header>
-    <div class="dream-list">
-      ${day.dreams.map(dream => `<div><strong>${dream.time} - ${dream.title}</strong><span>${dream.game} - ${dream.location}</span></div>`).join('')}
-    </div>
-    <h4>Team Competition Rotation</h4>
-    ${day.teamComps.map(comp => `
-      <div class="comp-card">
-        <strong>${comp.game}</strong>
-        <span>${comp.location}</span>
-        <div class="matchup-list">${comp.matchups.map(match => renderMatchup(match)).join('')}</div>
-      </div>
-    `).join('')}
-  </article>
-`).join('');
-
-highRopesGrid.innerHTML = highRopesSchedule.map(group => `
-  <details class="high-ropes-card">
-    <summary>
-      <span>
-        <strong>${group.day}</strong>
-        <small>${group.time} - ${group.wristband}</small>
-      </span>
-      <span class="chevron">+</span>
-    </summary>
-    <div class="student-list">
-      ${group.students.map(student => `
-        <article>
-          <strong>${student.name}</strong>
-          <span>Cabin ${student.cabin}</span>
-          <small>${student.church}</small>
-        </article>
-      `).join('')}
-    </div>
-  </details>
-`).join('');
-
-document.querySelectorAll('details.high-ropes-card').forEach(detail => {
-  detail.addEventListener('toggle', () => {
-    if (!detail.open) return;
-    document.querySelectorAll('details.high-ropes-card').forEach(other => {
-      if (other !== detail) other.removeAttribute('open');
-    });
-  });
-});
-
-function renderMealTimes(meal) {
-  if (!meal.serviceTimes || !meal.serviceTimes.length) return `<span>${meal.time}</span>`;
-  return `<div class="meal-times">${meal.serviceTimes.map(slot => `
-    <div class="meal-time-row">
-      <strong>${slot.time}</strong>
-      <span class="meal-team-dots">${(slot.teams || []).map(team => `<span class="team-dot" style="--team:${teamColors[team]}" title="${team}">${team[0]}</span>`).join('')}</span>
-    </div>
-  `).join('')}</div>`;
+.competition-day header {
+  margin-bottom: .85rem;
 }
 
-menuGrid.innerHTML = menuDays.map(day => `
-  <article class="menu-day">
-    <header>
-      <p class="eyebrow">${day.day}</p>
-      <h3>${day.date}</h3>
-    </header>
-    ${day.meals.map(meal => `
-      <div class="meal-card">
-        <div class="meal-card__title">
-          <strong>${meal.name}</strong>
-          ${renderMealTimes(meal)}
-        </div>
-        <ul>${meal.items.map(item => `<li>${item}</li>`).join('')}</ul>
-      </div>
-    `).join('')}
-  </article>
-`).join('');
+.competition-day h3,
+.competition-day h4 {
+  margin: .1rem 0 .6rem;
+}
 
-prayerGrid.innerHTML = prayerStations.map(station => `
-  <a class="prayer-button" href="${station.url}" target="_blank" rel="noopener">${station.title}</a>
-`).join('');
+.dream-list {
+  display: grid;
+  gap: .6rem;
+  margin-bottom: 1rem;
+}
 
-renderSchedule('day1');
+.dream-list div,
+.comp-card {
+  background: rgba(78, 173, 129, .12);
+  border: 1px solid rgba(78, 173, 129, .28);
+  border-radius: 18px;
+  padding: .85rem;
+}
+
+.dream-list span,
+.comp-card span {
+  display: block;
+  margin-top: .2rem;
+  color: var(--muted);
+}
+
+.comp-card {
+  margin-top: .65rem;
+  background: rgba(214, 156, 27, .14);
+  border-color: rgba(214, 156, 27, .3);
+}
+
+.comp-card ul {
+  margin: .55rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.high-ropes-card summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.high-ropes-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.high-ropes-card small {
+  display: block;
+  color: var(--muted);
+  margin-top: .25rem;
+}
+
+.student-list {
+  display: grid;
+  gap: .55rem;
+  margin-top: 1rem;
+  max-height: 460px;
+  overflow: auto;
+  padding-right: .25rem;
+}
+
+.student-list article {
+  border-radius: 16px;
+  border: 1px solid rgba(28, 149, 137, .2);
+  background: rgba(28, 149, 137, .08);
+  padding: .7rem .8rem;
+}
+
+.student-list span,
+.student-list small {
+  display: block;
+  color: var(--muted);
+  margin-top: .12rem;
+}
+
+.activity-card[open] .chevron,
+.high-ropes-card[open] .chevron {
+  transform: rotate(45deg);
+}
+
+.tab, .primary-action, .secondary-action, .button, .resource-card, .prayer-button, .call-link { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease; }
+.tab:active, .primary-action:active, .secondary-action:active, .button:active, .resource-card:active, .prayer-button:active, .call-link:active { transform: translateY(1px); opacity: .96; }
+.tab.is-active, .button--accent { box-shadow: 0 10px 28px rgba(236,78,112,.28); }
+
+.manual-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: #16111c;
+  color: white;
+  box-shadow: var(--shadow);
+  border: 3px solid var(--yellow);
+  margin: 22px 0;
+}
+.manual-card h2 { font-size: clamp(1.8rem, 6vw, 3rem); line-height: .95; margin: .2rem 0 .4rem; }
+.manual-card p:not(.eyebrow) { color: rgba(255,255,255,.78); margin: 0; line-height: 1.45; }
+.primary-action--manual,
+.button--manual,
+.resource-card--manual {
+  background: #16111c !important;
+  color: white !important;
+  border: 2px solid var(--yellow) !important;
+}
+.resource-card--manual small { color: var(--yellow) !important; }
+.contact-card {
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+}
+.contact-photo,
+.photo-placeholder {
+  width: 96px;
+  height: 96px;
+  border-radius: 28px;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, rgba(236,78,112,.8), rgba(255,245,109,.75));
+}
+.photo-placeholder { display: grid; place-items: center; color: white; font-weight: 950; }
+.meal-times {
+  display: grid;
+  gap: .35rem;
+  min-width: 128px;
+}
+.meal-time-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: .4rem;
+}
+.meal-time-row strong {
+  font-size: .92rem;
+  color: #9c1572;
+  white-space: nowrap;
+}
+.meal-team-dots {
+  display: inline-flex;
+  gap: .18rem;
+}
+.team-dot {
+  display: inline-grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  background: var(--team);
+  color: white;
+  font-size: .65rem;
+  font-weight: 950;
+  line-height: 1;
+  box-shadow: 0 1px 2px rgba(0,0,0,.18);
+}
+.team-dot[style*="#eab308"] { color: #1b1424; }
+@media (max-width: 640px) {
+  .manual-card { grid-template-columns: 1fr; }
+  .meal-time-row { justify-content: flex-start; }
+}
+
+
+/* v7 refinements */
+.hero-actions {
+  flex-direction: column;
+  align-items: center;
+}
+.hero-mini-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+.mini-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 9px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.34);
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+.manual-card { display: none !important; }
+.comp-card {
+  padding: 1rem;
+}
+.comp-card > strong {
+  display: block;
+  margin-bottom: .1rem;
+  font-size: 1.1rem;
+}
+.matchup-list {
+  display: grid;
+  gap: .35rem;
+  margin-top: .65rem;
+}
+.matchup-row {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 7px;
+  width: fit-content;
+}
+.matchup-pill {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 9px;
+  border-radius: 999px;
+  color: #fff !important;
+  font-size: .8rem;
+  font-weight: 950;
+  line-height: 1.15;
+  text-shadow: 0 1px 2px rgba(0,0,0,.35);
+  box-shadow: none;
+}
+.matchup-vs {
+  color: var(--ink);
+  font-weight: 950;
+  font-size: .82rem;
+  line-height: 1;
+}
+.matchup-row--text {
+  font-weight: 900;
+}
+@media (max-width: 640px) {
+  .matchup-row { gap: 6px; }
+  .matchup-pill { font-size: .78rem; padding: 3px 8px; }
+}
+}
