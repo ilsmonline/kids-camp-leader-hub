@@ -1,0 +1,1 @@
+{"name":"Breakaway Kids Leader Hub","short_name":"Leader Hub","start_url":"./index.html","display":"standalone","background_color":"#fff7df","theme_color":"#c85833","icons":[]}
