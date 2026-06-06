@@ -404,3 +404,6 @@ footer a { font-weight: 900; }
   .matchup-pill { font-size: .78rem; padding: 3px 8px; }
 }
 }
+#activities .dark-box p:first-of-type {
+  color: #f8f5ee;
+}
