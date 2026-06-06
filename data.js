@@ -1,12 +1,52 @@
 const contacts = [
-  { role: 'Kids Camp Director', name: 'Patti Chapman', phone: '(417) 429-7862', photo: 'https://drive.google.com/uc?export=view&id=1kt3T3rHRW5x8TrJIsnem2zacKon0EosE' },
-  { role: 'Kids Camp Director', name: 'Zach Krause', phone: '(763) 614-7531', photo: 'https://drive.google.com/uc?export=view&id=1dR9nrXdKqnAdZxRqIU9gi0uNNCrxMiRp' },
-  { role: 'Student Director (Male Dean)', name: 'Luke Marsiglio', phone: '(515) 771-8415', photo: 'https://drive.google.com/uc?export=view&id=1xi399zn9Bbrt7DAKF_ntmlpU_j8Diito' },
-  { role: 'Student Director (Male Dean)', name: 'Lucas Yantz', phone: '(502) 810-4714', photo: 'https://drive.google.com/uc?export=view&id=1wmDWhzBEu77KI9pLf15WHiUYPaBrXq-h' },
-  { role: 'Student Director (Male Dean)', name: 'Micah Hinckley', phone: '(217) 622-3142', photo: 'https://drive.google.com/uc?export=view&id=1pgqTnCr7GgsFsSgGWflCAXVprIShRGCJ' },
-  { role: 'Student Director (Female Dean)', name: 'Abigail Marsiglio', phone: '(914) 513-1931', photo: 'https://drive.google.com/uc?export=view&id=1Qyy2HalN4cCNzIMRhR3is7m7C61aOp9e' },
-  { role: 'Student Director (Female Dean)', name: 'Kaitlyn Deese', phone: '(417) 773-6873', photo: 'https://drive.google.com/uc?export=view&id=1dwNw6dtl0IKLP-8UFoxCP2a7quyr0v9n' },
-  { role: 'Student Director (Female Dean)', name: 'Rebecca Husbands', phone: '(314) 513-8070', photo: 'https://drive.google.com/uc?export=view&id=11gncWUzLY7nR0dP9lH2qe2WnOsw9do78' }
+  {
+    role: "Kids Camp Director",
+    name: "Patti Chapman",
+    phone: "(417) 429-7862",
+    photo: "photos/patti-chapman.jpg"
+  },
+  {
+    role: "Kids Camp Director",
+    name: "Zach Krause",
+    phone: "(763) 614-7531",
+    photo: "photos/zach-krause.jpg"
+  },
+  {
+    role: "Student Director (Male Dean)",
+    name: "Luke Marsiglio",
+    phone: "(515) 771-8415",
+    photo: "photos/luke-marsiglio.jpg"
+  },
+  {
+    role: "Student Director (Male Dean)",
+    name: "Lucas Yantz",
+    phone: "(502) 810-4714",
+    photo: "photos/lucas-yantz.jpg"
+  },
+  {
+    role: "Student Director (Male Dean)",
+    name: "Micah Hinckley",
+    phone: "(217) 622-3142",
+    photo: "photos/micah-hinckley.jpg"
+  },
+  {
+    role: "Student Director (Female Dean)",
+    name: "Abigail Marsiglio",
+    phone: "(914) 513-1931",
+    photo: "photos/abigail-marsiglio.jpg"
+  },
+  {
+    role: "Student Director (Female Dean)",
+    name: "Kaitlyn Deese",
+    phone: "(417) 773-6873",
+    photo: "photos/kaitlyn-deese.jpg"
+  },
+  {
+    role: "Student Director (Female Dean)",
+    name: "Rebecca Husbands",
+    phone: "(314) 513-8070",
+    photo: "photos/rebecca-husbands.jpg"
+  }
 ];
 
 const schedule = {
