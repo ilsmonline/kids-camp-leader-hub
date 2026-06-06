@@ -9,37 +9,37 @@ const contacts = [
     role: "Kids Camp Director",
     name: "Zach Krause",
     phone: "(763) 614-7531",
-    photo: "photos/zach-krause.jpg"
+    photo: "photos/zach-krause.jpeg"
   },
   {
     role: "Student Director (Male Dean)",
     name: "Luke Marsiglio",
     phone: "(515) 771-8415",
-    photo: "photos/luke-marsiglio.jpg"
+    photo: "photos/Luke Marsiglio - Male Dean.jpg"
   },
   {
     role: "Student Director (Male Dean)",
     name: "Lucas Yantz",
     phone: "(502) 810-4714",
-    photo: "photos/lucas-yantz.jpg"
+    photo: "photos/lucas-yantz.jpeg"
   },
   {
     role: "Student Director (Male Dean)",
     name: "Micah Hinckley",
     phone: "(217) 622-3142",
-    photo: "photos/micah-hinckley.jpg"
+    photo: "photos/micah-hinckley.jpeg"
   },
   {
     role: "Student Director (Female Dean)",
     name: "Abigail Marsiglio",
     phone: "(914) 513-1931",
-    photo: "photos/abigail-marsiglio.jpg"
+    photo: "photos/abigail-marsiglio.jpeg"
   },
   {
     role: "Student Director (Female Dean)",
     name: "Kaitlyn Deese",
     phone: "(417) 773-6873",
-    photo: "photos/kaitlyn-deese.jpg"
+    photo: "photos/kaitlyn-deese.jpeg"
   },
   {
     role: "Student Director (Female Dean)",
