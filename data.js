@@ -135,7 +135,7 @@ const schedule = {
     ["8:30 AM", "Breakfast - 🟥🟧🟨"],
     ["9:15 AM", "Breakfast - 🟩🟦🟪"],
     ["10:00 AM", "Closing Service - Auditorium"],
-    ["12:00 PM", "Departure - Sack Lunch available"]
+    ["12:00 PM", "Departure - Sack Lunch (if pre-ordered)"]
   ]
 };
 
