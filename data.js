@@ -420,7 +420,7 @@ const menuDays = [
   {
     day: 'Day Four', date: 'Thursday, June 11', meals: [
       { name: 'Breakfast', time: '8:30 AM / 9:15 AM', serviceTimes: [{ time: '8:30 AM', teams: ['Red','Orange','Yellow'] }, { time: '9:15 AM', teams: ['Green','Blue','Purple'] }], items: ['Cheese omelets (GF)', 'Sausage patties (GF)', 'Tater triangles', 'French toast sticks', 'Assorted juices / water', 'Rice Krispies', 'Banana (GF)'] },
-      { name: 'Lunch', time: 'Departure', serviceTimes: [{ time: 'Departure', teams: [] }], items: ['Sack lunch'] }
+      { name: 'Lunch', time: 'Departure', serviceTimes: [{ time: 'Departure', teams: [] }], items: ['Sack lunch if pre-ordered'] }
     ]
   }
 ];
