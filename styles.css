@@ -437,3 +437,9 @@ footer a { font-weight: 900; }
   .tabs { gap: 6px; }
   .tab { padding: 11px 4px; }
 }
+.scoring-box > p,
+.scoring-box p,
+.scoring-box .muted,
+.scoring-box .section-intro {
+  color: #ffffff !important;
+}
