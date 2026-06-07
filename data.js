@@ -1,51 +1,51 @@
 const contacts = [
   {
-    role: "Kids Camp Director",
-    name: "Patti Chapman",
-    phone: "(417) 429-7862",
-    photo: "photos/patti-chapman.jpg"
+    role: 'Kids Camp Director',
+    name: 'Patti Chapman',
+    phone: '(417) 429-7862',
+    photo: 'photos/patti-chapman.jpg'
   },
   {
-    role: "Kids Camp Director",
-    name: "Zach Krause",
-    phone: "(763) 614-7531",
-    photo: "photos/zach-krause.jpeg"
+    role: 'Kids Camp Director',
+    name: 'Zach Krause',
+    phone: '(763) 614-7531',
+    photo: 'photos/zach-krause.jpeg'
   },
   {
-    role: "Student Director (Male Dean)",
-    name: "Luke Marsiglio",
-    phone: "(515) 771-8415",
-    photo: "photos/Luke Marsiglio - Male Dean.jpg"
+    role: 'Student Director (Male Dean)',
+    name: 'Luke Marsiglio',
+    phone: '(515) 771-8415',
+    photo: 'photos/Luke Marsiglio - Male Dean.jpg'
   },
   {
-    role: "Student Director (Male Dean)",
-    name: "Lucas Yantz",
-    phone: "(502) 810-4714",
-    photo: "photos/lucas-yantz.jpeg"
+    role: 'Student Director (Male Dean)',
+    name: 'Lucas Yantz',
+    phone: '(502) 810-4714',
+    photo: 'photos/lucas-yantz.jpeg'
   },
   {
-    role: "Student Director (Male Dean)",
-    name: "Micah Hinckley",
-    phone: "(217) 622-3142",
-    photo: "photos/micah-hinckley.jpeg"
+    role: 'Student Director (Male Dean)',
+    name: 'Micah Hinckley',
+    phone: '(217) 622-3142',
+    photo: 'photos/micah-hinckley.jpeg'
   },
   {
-    role: "Student Director (Female Dean)",
-    name: "Abigail Marsiglio",
-    phone: "(914) 513-1931",
-    photo: "photos/abigail-marsiglio.jpeg"
+    role: 'Student Director (Female Dean)',
+    name: 'Abigail Marsiglio',
+    phone: '(914) 513-1931',
+    photo: 'photos/abigail-marsiglio.jpeg'
   },
   {
-    role: "Student Director (Female Dean)",
-    name: "Kaitlyn Deese",
-    phone: "(417) 773-6873",
-    photo: "photos/kaitlyn-deese.jpeg"
+    role: 'Student Director (Female Dean)',
+    name: 'Kaitlyn Deese',
+    phone: '(417) 773-6873',
+    photo: 'photos/kaitlyn-deese.jpeg'
   },
   {
-    role: "Student Director (Female Dean)",
-    name: "Rebecca Husbands",
-    phone: "(314) 513-8070",
-    photo: "photos/rebecca-husbands.jpg"
+    role: 'Student Director (Female Dean)',
+    name: 'Rebecca Husbands',
+    phone: '(314) 513-8070',
+    photo: 'photos/rebecca-husbands.jpg'
   }
 ];
 
@@ -418,20 +418,21 @@ const menuDays = [
 ];
 
 const prayerStations = [
-  { title: 'Pray for the World and Missions', url: 'https://drive.google.com/file/d/1CPF18PE3dBXcFF2VW1HAtDFCr5sfDRQK/view?usp=drivesdk' },
-  { title: 'Pray for Your Family', url: 'https://drive.google.com/file/d/1aVEQDrle-gMeIZcqn3t0V8e1ExFWCnua/view?usp=drivesdk' },
-  { title: 'Called', url: 'https://drive.google.com/file/d/1DEEqOZsEj9nlo4Z5tM2cNIpAVbXr-wMK/view?usp=drivesdk' },
-  { title: 'Make Your Mark', url: 'https://drive.google.com/file/d/14S3EhBZYmpinnGpEIunb5_ElsMOeuxzD/view?usp=drivesdk' },
-  { title: 'Filled with the Holy Spirit', url: 'https://drive.google.com/file/d/1o39O7rj7PBTYXSyD81RYozW8c5Gxc43T/view?usp=drivesdk' },
-  { title: 'The Wonder of Worship', url: 'https://drive.google.com/file/d/1lXAZ1Z8NRydcpap2mMZNZFO2jlXxZiJH/view?usp=drivesdk' },
-  { title: 'Pray for Healing', url: 'https://drive.google.com/file/d/1LTCHZ7VL-vEiyYiRWgxktNNN3EW1jwfF/view?usp=drivesdk' },
-  { title: 'Pray for Your Friends', url: 'https://drive.google.com/file/d/1M5qRKHqIfGty1xOAA331E0LxJmwqnGcc/view?usp=drivesdk' },
-  { title: 'Pray for Unity', url: 'https://drive.google.com/file/d/1d0YiG6WQzVwDDWhNjBAKDtWkh8dzTyCC/view?usp=drivesdk' },
-  { title: 'Pray for Yourself', url: 'https://drive.google.com/file/d/1TUdUnQDdu_pbGIietn3i2ye7xE0ndqNw/view?usp=drivesdk' },
-  { title: 'Shine in the Darkness', url: 'https://drive.google.com/file/d/1XkqrruS-7gDBiwlDLLA0J0MtGc5sgeiV/view?usp=drivesdk' },
-  { title: 'Make Time', url: 'https://drive.google.com/file/d/1a7qdGf_FvsRLOOdGsX_R8tlVj7_8kb5z/view?usp=drivesdk' },
-  { title: 'Pray for Your School', url: 'https://drive.google.com/file/d/1xKcyOq0iKlRV6uZdpQoEFGQcEX2ZKVjw/view?usp=drivesdk' },
-  { title: 'Pray for Your Church', url: 'https://drive.google.com/file/d/1Kxe0vBqs0H6RK4c27WOyDD3YrenBp6Z5/view?usp=drivesdk' },
-  { title: 'Pray for Forgiveness', url: 'https://drive.google.com/file/d/1wxARhoSbS3XNrVsv9B3Jq8Vc_npfnQIU/view?usp=drivesdk' },
-  { title: 'Pray for Your Pastors', url: 'https://drive.google.com/file/d/1OFQdOFB0NBwzrC58R3U49reXDtqYEbom/view?usp=drivesdk' }
+  { title: 'Pray for the World and Missions', url: 'files/prayer-stations/pray-for-the-world-and-missions.pdf' },
+  { title: 'Pray for Your Family', url: 'files/prayer-stations/pray-for-your-family.pdf' },
+  { title: 'Called', url: 'files/prayer-stations/called.pdf' },
+  { title: 'Identity - Who God Says You Are', url: 'files/prayer-stations/identity-who-god-says-you-are.pdf' },
+  { title: 'Make Your Mark', url: 'files/prayer-stations/make-your-mark.pdf' },
+  { title: 'Filled with the Holy Spirit', url: 'files/prayer-stations/filled-with-the-holy-spirit.pdf' },
+  { title: 'The Wonder of Worship', url: 'files/prayer-stations/the-wonder-of-worship.pdf' },
+  { title: 'Pray for Healing', url: 'files/prayer-stations/pray-for-healing.pdf' },
+  { title: 'Pray for Your Friends', url: 'files/prayer-stations/pray-for-your-friends.pdf' },
+  { title: 'Pray for Unity', url: 'files/prayer-stations/pray-for-unity.pdf' },
+  { title: 'Pray for Yourself', url: 'files/prayer-stations/pray-for-yourself.pdf' },
+  { title: 'Shine in the Darkness', url: 'files/prayer-stations/shine-in-the-darkness.pdf' },
+  { title: 'Make Time', url: 'files/prayer-stations/make-time.pdf' },
+  { title: 'Pray for Your School', url: 'files/prayer-stations/pray-for-your-school.pdf' },
+  { title: 'Pray for Your Church', url: 'files/prayer-stations/pray-for-your-church.pdf' },
+  { title: 'Pray for Forgiveness', url: 'files/prayer-stations/pray-for-forgiveness.pdf' },
+  { title: 'Pray for Your Pastors', url: 'files/prayer-stations/pray-for-your-pastors.pdf' }
 ];

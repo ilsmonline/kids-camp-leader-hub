@@ -404,6 +404,36 @@ footer a { font-weight: 900; }
   .matchup-pill { font-size: .78rem; padding: 3px 8px; }
 }
 }
-#activities .dark-box p:first-of-type {
-  color: #f8f5ee;
+
+
+/* Final mobile/public-facing cleanup */
+.activity-intro__lead,
+.activity-intro p:first-of-type {
+  color: #f8f5ee !important;
+}
+
+.contact-photo,
+.contact-card img {
+  object-position: center top !important;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  overflow: visible;
+}
+
+.tab {
+  min-width: 0;
+  width: 100%;
+  padding: 12px 6px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(.86rem, 3.1vw, 1rem);
+}
+
+@media (max-width: 420px) {
+  .tabs { gap: 6px; }
+  .tab { padding: 11px 4px; }
 }
