@@ -399,7 +399,7 @@ const highRopesSchedule = [
 const menuDays = [
   {
     day: 'Day One', date: 'Monday, June 8', meals: [
-      { name: 'Lunch', time: '11:00 AM - 12:30 PM', serviceTimes: [{ time: 'Open Lunch', teams: [] }], items: ['Cold cuts, cheese, and buns', 'Salad bar / beverage center', 'Assorted desserts'] },
+      { name: 'Lunch', time: '11:00 AM - 12:30 PM', serviceTimes: [{ time: 'Open Lunch - $6', teams: [] }], items: ['Cold cuts, cheese, and buns', 'Salad bar / beverage center', 'Assorted desserts'] },
       { name: 'Dinner', time: '4:45 PM / 5:15 PM', serviceTimes: [{ time: '4:45 PM', teams: ['Red','Orange','Yellow'] }, { time: '5:15 PM', teams: ['Green','Blue','Purple'] }], items: ['Chicken tenders', 'Potato chips', 'Potato salad', 'Carrots with ranch packets', 'Orange drink / water', 'Ice cream sandwich'] }
     ]
   },
