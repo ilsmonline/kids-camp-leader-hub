@@ -125,7 +125,6 @@ const schedule = {
     ["7:30 PM", "Night Meds from Nurse 🟥🟧🟨 - Upstairs AC"],
     ["7:30 PM", "Evening Activities/Cafe/Store Open - AC/Grant/Lincoln"],
     ["8:15 PM", "Night Meds from Nurse 🟩🟦🟪 - Upstairs AC"],
-    ["9:30 PM", "Camp Champ Announcement - Auditorium"],
     ["10:00 PM", "Cabin Time"],
     ["11:00 PM", "Lights Out"]
   ],
