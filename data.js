@@ -6,135 +6,110 @@ const contacts = [
     photo: 'photos/patti-chapman.jpg'
   },
   {
-    role: 'Kids Camp Director',
-    name: 'Zach Krause',
-    phone: '(763) 614-7531',
-    photo: 'photos/zach-krause.jpeg'
+    role: 'Student Director (Male Dean)',
+    name: 'Cooper Frank',
+    phone: '(815) 878-4831',
+    photo: 'photos/Cooper-Frank.jpg'
   },
   {
     role: 'Student Director (Male Dean)',
-    name: 'Luke Marsiglio',
-    phone: '(515) 771-8415',
-    photo: 'photos/Luke Marsiglio - Male Dean.jpg'
-  },
-  {
-    role: 'Student Director (Male Dean)',
-    name: 'Lucas Yantz',
-    phone: '(502) 810-4714',
-    photo: 'photos/lucas-yantz.jpeg'
-  },
-  {
-    role: 'Student Director (Male Dean)',
-    name: 'Micah Hinckley',
-    phone: '(217) 622-3142',
-    photo: 'photos/micah-hinckley.jpeg'
+    name: 'Jared Massey',
+    phone: '(217) 242-1819',
+    photo: 'photos/JARED-MASSEY.jpg'
   },
   {
     role: 'Student Director (Female Dean)',
-    name: 'Abigail Marsiglio',
-    phone: '(914) 513-1931',
-    photo: 'photos/abigail-marsiglio.jpeg'
+    name: 'Jacquelyn Johnson',
+    phone: '(224) 610-6243',
+    photo: 'photos/Jacquelyn-Johnson.png'
   },
   {
     role: 'Student Director (Female Dean)',
-    name: 'Kaitlyn Deese',
-    phone: '(417) 773-6873',
-    photo: 'photos/kaitlyn-deese.jpeg'
-  },
-  {
-    role: 'Student Director (Female Dean)',
-    name: 'Rebecca Husbands',
-    phone: '(314) 513-8070',
-    photo: 'photos/rebecca-husbands.jpg'
+    name: 'Stacey Wilson',
+    phone: '(618) 447-5981',
+    photo: 'photos/Stacey-Wilson.jpeg'
   }
 ];
 
 const schedule = {
   day1: [
-    ["9:00 AM", "Registration Begins (til 1pm) - Outdoor Activities Available"],
-    ["9:30 AM", "Swim Testing (til 1pm) - AC Indoor Pool"],
-    ["11:00 AM", "Dining Hall Opens (til 12:30pm) - $6 Cash or Card"],
-    ["12:30 PM", "SS Mtg to prep for Opening Rally - Admin"],
-    ["1:00 PM", "Cabin Leader Orientation - Schneider Center"],
-    ["1:00 PM", "Opening Rally - Auditorium"],
-    ["1:30 PM", "Support Staff Mtg - Admin"],
-    ["1:45 PM", "Cabin Leader/Camper Connect - Cabins"],
-    ["2:00 PM", "Overflow Swim Testing (til 4pm)"],
-    ["2:30 PM", "FREE TIME - AC"],
-    ["4:30 PM", "Clean Up for Dinner - Cabins"],
-    ["4:45 PM", "Dinner - 🟥🟧🟨"],
-    ["5:15 PM", "Dinner - 🟩🟦🟪"],
-    ["6:00 PM", "First-Time Cabin Leader Meeting - Schneider Center"],
-    ["6:00 PM", "Opening Service - Auditorium"],
-    ["7:30 PM", "Prayer Stations - Schneider Center - Mon 🟥🟦"],
-    ["7:30 PM", "Overflow Swim Testing (til 9pm) - AC Indoor Pool"],
-    ["7:30 PM", "Night Meds from Nurse 🟥🟧🟨 - Upstairs AC"],
-    ["7:30 PM", "Evening Activities/Cafe/Store Open - AC/Grant/Lincoln"],
-    ["8:15 PM", "Night Meds from Nurse 🟩🟦🟪 - Upstairs AC"],
-    ["10:00 PM", "Cabin Time"],
-    ["11:00 PM", "Lights Out"]
+    ['9:00 AM', 'Registration Begins (until 1:00 PM) - Outdoor Activities Available'],
+    ['9:30 AM', 'Swim Testing (until 1:00 PM) - AC Indoor Pool'],
+    ['11:00 AM', 'Dining Hall Opens (until 12:30 PM) - $6 cash or card'],
+    ['12:30 PM', 'Support Staff Meeting to prep for Opening Rally - Admin'],
+    ['1:00 PM', 'Cabin Leader Orientation - Schneider Center'],
+    ['1:00 PM', 'Opening Rally - Auditorium'],
+    ['1:30 PM', 'Support Staff Meeting - Admin'],
+    ['1:45 PM', 'Cabin Leader / Camper Connect - Cabins'],
+    ['2:00 PM', 'Overflow Swim Testing (until 4:00 PM)'],
+    ['2:30 PM', 'Free Time - AC, Outdoor Pool, Beach'],
+    ['4:30 PM', 'Clean Up for Dinner - Cabins'],
+    ['4:45 PM', 'Dinner - Red / Orange / Yellow'],
+    ['5:15 PM', 'Dinner - Green / Blue / Purple'],
+    ['6:00 PM', 'First-Time Cabin Leader Meeting - Schneider Center'],
+    ['6:00 PM', 'Opening Service - Auditorium'],
+    ['7:30 PM', 'Prayer Stations - Schneider Center - Red / Blue'],
+    ['7:30 PM', 'Overflow Swim Testing (until 9:00 PM) - AC Indoor Pool'],
+    ['8:15 PM', 'Night Meds from Nurse - Green / Blue / Purple - Upstairs AC'],
+    ['10:00 PM', 'Cabin Time'],
+    ['11:00 PM', 'Lights Out']
   ],
-
   day2: [
-    ["7:00 AM", "Wake Up & Clean Up"],
-    ["8:00 AM", "Breakfast - 🟥🟧🟨"],
-    ["8:30 AM", "Breakfast - 🟩🟦🟪"],
-    ["9:15 AM", "The Morning Show - Auditorium"],
-    ["9:15 AM", "Cabin Leader Mtg - Schneider Center"],
-    ["10:15 AM", "Boy's Dream - Auditorium"],
-    ["10:15 AM", "Girls Team Comp - Refer to Activities Guide for Daily Locations"],
-    ["11:15 AM", "Transition to Lunch"],
-    ["11:30 AM", "Lunch - 🟥🟧🟨"],
-    ["12:00 PM", "Lunch - 🟩🟦🟪"],
-    ["12:45 PM", "Girls Dream - Auditorium"],
-    ["12:45 PM", "Boys Team Comp - Refer to Activities Guide for Daily Locations"],
-    ["2:00 PM", "FREE TIME - ALL (til 4:30PM) - AC & Outdoor Activities"],
-    ["2:00 PM", "High Ropes - Green paper wristbands"],
-    ["4:30 PM", "Clean Up for Dinner - Cabins"],
-    ["4:45 PM", "Dinner - 🟥🟧🟨"],
-    ["5:15 PM", "Dinner - 🟩🟦🟪"],
-    ["6:00 PM", "Evening Service"],
-    ["7:30 PM", "Prayer Stations - Schneider Center - Tues 🟨🟩"],
-    ["7:30 PM", "Night Meds from Nurse 🟩🟦🟪 - Upstairs AC"],
-    ["7:30 PM", "Evening Activities/Cafe/Store Open - AC/Grant/Lincoln"],
-    ["8:15 PM", "Night Meds from Nurse 🟥🟧🟨 - Upstairs AC"],
-    ["10:00 PM", "Cabin Time"],
-    ["11:00 PM", "Lights Out"]
+    ['7:00 AM', 'Wake Up & Clean Up'],
+    ['8:00 AM', 'Breakfast - Red / Orange / Yellow'],
+    ['8:30 AM', 'Breakfast - Green / Blue / Purple'],
+    ['9:15 AM', 'The Morning Show - Auditorium'],
+    ['10:15 AM', "Boy's Dream - Auditorium"],
+    ['11:15 AM', 'Transition to Lunch'],
+    ['11:30 AM', 'Lunch - Red / Orange / Yellow'],
+    ['12:00 PM', 'Lunch - Green / Blue / Purple'],
+    ['12:45 PM', "Girls' Dream - Auditorium"],
+    ['2:00 PM', 'Free Time - All - AC & Outdoor Activities'],
+    ['2:00 PM', 'High Ropes - Green paper wristbands'],
+    ['4:30 PM', 'Clean Up for Dinner - Cabins'],
+    ['4:45 PM', 'Dinner - Red / Orange / Yellow'],
+    ['5:15 PM', 'Dinner - Green / Blue / Purple'],
+    ['6:00 PM', 'Evening Service'],
+    ['7:30 PM', 'Prayer Stations - Schneider Center - Yellow / Green'],
+    ['7:30 PM', 'Night Meds from Nurse - Red / Orange / Yellow - Upstairs AC'],
+    ['8:15 PM', 'Evening Activities / Cafe / Store Open - AC / Grant / Lincoln'],
+    ['10:00 PM', 'Cabin Time'],
+    ['11:00 PM', 'Lights Out']
   ],
-
   day3: [
-    ["7:00 AM", "Wake Up & Clean Up"],
-    ["8:00 AM", "Breakfast - 🟥🟧🟨"],
-    ["8:30 AM", "Breakfast - 🟩🟦🟪"],
-    ["9:15 AM", "The Morning Show - Auditorium"],
-    ["9:15 AM", "Cabin Leader Mtg - Schneider Center"],
-    ["10:15 AM", "Boy's Dream - Auditorium"],
-    ["10:15 AM", "Girls Team Comp - Refer to Activities Guide for Daily Locations"],
-    ["11:15 AM", "Transition to Lunch"],
-    ["11:30 AM", "Lunch - 🟥🟧🟨"],
-    ["12:00 PM", "Lunch - 🟩🟦🟪"],
-    ["12:45 PM", "Girls Dream - Auditorium"],
-    ["12:45 PM", "Boys Team Comp - Refer to Activities Guide for Daily Locations"],
-    ["2:00 PM", "FREE TIME - ALL (til 4:30PM) - AC & Outdoor Activities"],
-    ["2:00 PM", "High Ropes - Yellow paper wristbands"],
-    ["4:30 PM", "Clean Up for Dinner - Cabins"],
-    ["4:45 PM", "Dinner - 🟥🟧🟨"],
-    ["5:15 PM", "Dinner - 🟩🟦🟪"],
-    ["6:00 PM", "Evening Service - Offering Night"],
-    ["7:30 PM", "Prayer Stations - Schneider Center - Wed 🟪🟧"],
-    ["7:30 PM", "Night Meds from Nurse 🟥🟧🟨 - Upstairs AC"],
-    ["7:30 PM", "Evening Activities/Cafe/Store Open - AC/Grant/Lincoln"],
-    ["8:15 PM", "Night Meds from Nurse 🟩🟦🟪 - Upstairs AC"],
-    ["10:00 PM", "Cabin Time"],
-    ["11:00 PM", "Lights Out"]
+    ['7:00 AM', 'Wake Up & Clean Up'],
+    ['8:00 AM', 'Breakfast - Red / Orange / Yellow'],
+    ['8:30 AM', 'Breakfast - Green / Blue / Purple'],
+    ['9:15 AM', 'The Morning Show - Auditorium'],
+    ['9:15 AM', 'Cabin Leader Meeting - Schneider Center'],
+    ['10:15 AM', "Boy's Dream - Auditorium"],
+    ['10:15 AM', "Girls' Team Comp - Refer to Activities Guide for daily locations"],
+    ['11:15 AM', 'Transition to Lunch'],
+    ['11:30 AM', 'Lunch - Red / Orange / Yellow'],
+    ['12:00 PM', 'Lunch - Green / Blue / Purple'],
+    ['12:45 PM', "Girls' Dream - Auditorium"],
+    ['12:45 PM', "Boys' Team Comp - Refer to Activities Guide for daily locations"],
+    ['2:00 PM', 'Free Time - All - AC & Outdoor Activities'],
+    ['2:00 PM', 'High Ropes - Yellow paper wristbands'],
+    ['4:30 PM', 'Clean Up for Dinner - Cabins'],
+    ['4:45 PM', 'Dinner - Red / Orange / Yellow'],
+    ['5:15 PM', 'Dinner - Green / Blue / Purple'],
+    ['6:00 PM', 'Evening Service - Offering Night'],
+    ['7:30 PM', 'Prayer Stations - Schneider Center - Purple / Orange'],
+    ['7:30 PM', 'Night Meds from Nurse - Red / Orange / Yellow - Upstairs AC'],
+    ['8:15 PM', 'Night Meds from Nurse - Green / Blue / Purple - Upstairs AC'],
+    ['8:15 PM', 'Evening Activities / Cafe / Store Open - AC / Grant / Lincoln'],
+    ['9:30 PM', 'Camp Champ Announcement - Auditorium'],
+    ['10:00 PM', 'Cabin Time'],
+    ['11:00 PM', 'Lights Out']
   ],
-
   day4: [
-    ["7:00 AM", "Pack and Clean - Empty Cabins Completely / Room Checks"],
-    ["8:30 AM", "Breakfast - 🟥🟧🟨"],
-    ["9:15 AM", "Breakfast - 🟩🟦🟪"],
-    ["10:00 AM", "Closing Service - Auditorium"],
-    ["12:00 PM", "Departure - Sack Lunch (if pre-ordered)"]
+    ['7:00 AM', 'Pack and Clean - Empty cabins completely - Room checks'],
+    ['8:00 AM', 'Activities Open until 10:00 AM - AC'],
+    ['8:30 AM', 'Breakfast - Red / Orange / Yellow'],
+    ['9:15 AM', 'Breakfast - Green / Blue / Purple'],
+    ['10:00 AM', 'Closing Service - Auditorium'],
+    ['12:00 PM', 'Departure - Sack lunch available']
   ]
 };
 
@@ -281,7 +256,7 @@ const competitionSchedule = [
     teamComps: [
       { game: 'Steal the Treasure', location: 'Gym 1 - Large Gym / Activities Center', matchups: ['Red v Green'] },
       { game: 'Defender 2.0', location: 'Cottonwood Pavilion', matchups: ['Orange v Purple'] },
-      { game: 'Handball', location: 'Small Gym', matchups: ['Yellow v Blue'] }
+      { game: 'Handball', location: 'Outdoor Field #3', matchups: ['Yellow v Blue'] }
     ]
   },
   {
@@ -293,7 +268,7 @@ const competitionSchedule = [
     teamComps: [
       { game: 'Steal the Treasure', location: 'Gym 1 - Large Gym / Activities Center', matchups: ['Orange v Blue'] },
       { game: 'Defender 2.0', location: 'Cottonwood Pavilion', matchups: ['Red v Yellow'] },
-      { game: 'Handball', location: 'Small Gym', matchups: ['Green v Purple'] }
+      { game: 'Handball', location: 'Outdoor Field #3', matchups: ['Green v Purple'] }
     ]
   }
 ];
@@ -397,29 +372,29 @@ const highRopesSchedule = [
 
 const menuDays = [
   {
-    day: 'Day One', date: 'Monday, June 8', meals: [
-      { name: 'Lunch', time: '11:00 AM - 12:30 PM', serviceTimes: [{ time: 'Open Lunch - $6', teams: [] }], items: ['Cold cuts, cheese, and buns', 'Salad bar / beverage center', 'Assorted desserts'] },
-      { name: 'Dinner', time: '4:45 PM / 5:15 PM', serviceTimes: [{ time: '4:45 PM', teams: ['Red','Orange','Yellow'] }, { time: '5:15 PM', teams: ['Green','Blue','Purple'] }], items: ['Chicken tenders', 'Potato chips', 'Potato salad', 'Carrots with ranch packets', 'Orange drink / water', 'Ice cream sandwich'] }
+    day: 'Day One', date: 'Tuesday, June 16', meals: [
+      { name: 'Lunch', time: '11:30 AM - 1:00 PM', serviceTimes: [{ time: 'Open Lunch', teams: [] }], items: ['Cold cuts, cheese, and buns', 'Potato chips', 'Potato salad', 'Carrots (GF) with ranch packets', 'Salad bar / beverage center', 'Brownie bites'] },
+      { name: 'Dinner', time: '4:45 PM / 5:15 PM', serviceTimes: [{ time: '4:45 PM', teams: ['Red','Orange','Yellow'] }, { time: '5:15 PM', teams: ['Green','Blue','Purple'] }], items: ['Chicken tenders', 'Mashed potatoes (GF) with cream gravy', 'Baby carrots (GF)', 'Orange drink / water', 'Ice cream sandwich'] }
     ]
   },
   {
-    day: 'Day Two', date: 'Tuesday, June 9', meals: [
+    day: 'Day Two', date: 'Wednesday, June 17', meals: [
       { name: 'Breakfast', time: '8:00 AM / 8:30 AM', serviceTimes: [{ time: '8:00 AM', teams: ['Red','Orange','Yellow'] }, { time: '8:30 AM', teams: ['Green','Blue','Purple'] }], items: ['Cheese omelets (GF)', 'Sausage patties (GF)', 'Tater coins', 'French toast', 'Orange juice / water', 'Fruit Loops', 'Apples (GF, DF)'] },
       { name: 'Lunch', time: '11:30 AM / 12:00 PM', serviceTimes: [{ time: '11:30 AM', teams: ['Red','Orange','Yellow'] }, { time: '12:00 PM', teams: ['Green','Blue','Purple'] }], items: ['Sloppy Joes (GF) with bun', 'French fries', 'Mixed vegetables (GF)', 'Pink lemonade / water', 'Rice Krispie Treats'] },
       { name: 'Dinner', time: '4:45 PM / 5:15 PM', serviceTimes: [{ time: '4:45 PM', teams: ['Red','Orange','Yellow'] }, { time: '5:15 PM', teams: ['Green','Blue','Purple'] }], items: ['Hamburgers (GF) with bun', 'Hot dogs (GF) with bun', 'Au gratin potatoes', 'Broccoli (GF)', 'Lemonade / water', 'Sidekicks'] }
     ]
   },
   {
-    day: 'Day Three', date: 'Wednesday, June 10', meals: [
+    day: 'Day Three', date: 'Thursday, June 18', meals: [
       { name: 'Breakfast', time: '8:00 AM / 8:30 AM', serviceTimes: [{ time: '8:00 AM', teams: ['Red','Orange','Yellow'] }, { time: '8:30 AM', teams: ['Green','Blue','Purple'] }], items: ['Scrambled eggs (GF)', 'Sausage links (GF)', 'Tater triangles', 'Pancakes', 'Apple juice / water', 'Cocoa Puffs', 'Oranges'] },
       { name: 'Lunch', time: '11:30 AM / 12:00 PM', serviceTimes: [{ time: '11:30 AM', teams: ['Red','Orange','Yellow'] }, { time: '12:00 PM', teams: ['Green','Blue','Purple'] }], items: ['Pizza - 2 kinds', 'Waffle fries', 'Corn (GF)', 'Orange drink / water', 'Cookies'] },
       { name: 'Dinner', time: '4:45 PM / 5:15 PM', serviceTimes: [{ time: '4:45 PM', teams: ['Red','Orange','Yellow'] }, { time: '5:15 PM', teams: ['Green','Blue','Purple'] }], items: ['Mini corn dogs', 'Tater tots', 'California blend vegetables (GF)', 'Pink lemonade / water', 'Fudge bars'] }
     ]
   },
   {
-    day: 'Day Four', date: 'Thursday, June 11', meals: [
-      { name: 'Breakfast', time: '8:30 AM / 9:15 AM', serviceTimes: [{ time: '8:30 AM', teams: ['Red','Orange','Yellow'] }, { time: '9:15 AM', teams: ['Green','Blue','Purple'] }], items: ['Cheese omelets (GF)', 'Sausage patties (GF)', 'Tater triangles', 'French toast sticks', 'Assorted juices / water', 'Rice Krispies', 'Banana (GF)'] },
-      { name: 'Lunch', time: 'Departure', serviceTimes: [{ time: 'Departure', teams: [] }], items: ['Sack lunch if pre-ordered'] }
+    day: 'Day Four', date: 'Friday, June 19', meals: [
+      { name: 'Breakfast', time: '8:30 AM / 9:15 AM', serviceTimes: [{ time: '8:30 AM', teams: ['Red','Orange','Yellow'] }, { time: '9:15 AM', teams: ['Green','Blue','Purple'] }], items: ['Cheese omelets (GF)', 'Sausage patties', 'Potato cubes', 'French toast sticks', 'Assorted juices / water', 'Rice Krispies', 'Banana (GF)'] },
+      { name: 'Lunch', time: 'Departure', serviceTimes: [{ time: 'Departure', teams: [] }], items: ['Sack lunch'] }
     ]
   }
 ];
@@ -427,7 +402,7 @@ const menuDays = [
 const prayerStations = [
   { title: 'Pray for the World and Missions', url: 'files/prayer-stations/pray-for-the-world-and-missions.pdf' },
   { title: 'Pray for Your Family', url: 'files/prayer-stations/pray-for-your-family.pdf' },
-  { title: 'Called', url: 'files/prayer-stations/called.pdf' },
+  { title: 'Called', url: 'files/prayer-stations/CALLED.pdf' },
   { title: 'Identity - Who God Says You Are', url: 'files/prayer-stations/identity-who-god-says-you-are.pdf' },
   { title: 'Make Your Mark', url: 'files/prayer-stations/make-your-mark.pdf' },
   { title: 'Filled with the Holy Spirit', url: 'files/prayer-stations/filled-with-the-holy-spirit.pdf' },
