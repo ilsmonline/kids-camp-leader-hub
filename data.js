@@ -67,7 +67,7 @@ const schedule = {
     ['11:30 AM', 'Lunch - Red / Orange / Yellow'],
     ['12:00 PM', 'Lunch - Green / Blue / Purple'],
     ['12:45 PM', "Girls' Dream - Auditorium"],
-    ['12:45 PM', "Boy's Team Comp - See Activities Schedule for location"],
+    ['12:45 PM', "Boy's Team Comp - Refer to Activities Guide for daily locations"],
     ['2:00 PM', 'Free Time - All - AC & Outdoor Activities'],
     ['2:00 PM', 'High Ropes - Green paper wristbands'],
     ['4:30 PM', 'Clean Up for Dinner - Cabins'],
