@@ -261,7 +261,7 @@ const competitionSchedule = [
     teamComps: [
       { game: 'Steal the Treasure', location: 'Gym 1 - Large Gym / Activities Center', matchups: ['Red v Green'] },
       { game: 'Defender 2.0', location: 'Cottonwood Pavilion', matchups: ['Orange v Purple'] },
-      { game: 'Handball', location: 'Outdoor Field #3', matchups: ['Yellow v Blue'] }
+      { game: 'Handball', location: 'Small Gym', matchups: ['Yellow v Blue'] }
     ]
   },
   {
@@ -273,7 +273,7 @@ const competitionSchedule = [
     teamComps: [
       { game: 'Steal the Treasure', location: 'Gym 1 - Large Gym / Activities Center', matchups: ['Orange v Blue'] },
       { game: 'Defender 2.0', location: 'Cottonwood Pavilion', matchups: ['Red v Yellow'] },
-      { game: 'Handball', location: 'Outdoor Field #3', matchups: ['Green v Purple'] }
+      { game: 'Handball', location: 'Small Gym', matchups: ['Green v Purple'] }
     ]
   }
 ];
