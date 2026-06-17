@@ -49,9 +49,9 @@ const schedule = {
     ['6:00 PM', 'First-Time Cabin Leader Meeting - Schneider Center'],
     ['6:00 PM', 'Opening Service - Auditorium'],
     ['7:30 PM', 'Prayer Stations - Schneider Center - Red / Blue'],
-    ['7:30 PM', 'Evening Activities / Cafe / Store Open - AC / Grant / Lincoln']
+    ['7:30 PM', 'Evening Activities / Cafe / Store Open - AC / Grant / Lincoln'],
     ['7:30 PM', 'Overflow Swim Testing (until 9:00 PM) - AC Indoor Pool'],
-    ['7:30 PM', 'Night Meds from Nurse - Red / Orange / Yellow - Upstairs AC']
+    ['7:30 PM', 'Night Meds from Nurse - Red / Orange / Yellow - Upstairs AC'],
     ['8:15 PM', 'Night Meds from Nurse - Green / Blue / Purple - Upstairs AC'],
     ['10:00 PM', 'Cabin Time'],
     ['11:00 PM', 'Lights Out']
@@ -101,7 +101,7 @@ const schedule = {
     ['7:30 PM', 'Prayer Stations - Schneider Center - Purple / Orange'],
     ['7:30 PM', 'Evening Activities / Cafe / Store Open - AC / Grant / Lincoln'],
     ['7:30 PM', 'Night Meds from Nurse - Red / Orange / Yellow - Upstairs AC'],
-    ['8:15 PM', 'Night Meds from Nurse - Green / Blue / Purple - Upstairs AC'],    
+    ['8:15 PM', 'Night Meds from Nurse - Green / Blue / Purple - Upstairs AC'],
     ['9:30 PM', 'Camp Champ Announcement - Auditorium'],
     ['10:00 PM', 'Cabin Time'],
     ['11:00 PM', 'Lights Out']
@@ -115,6 +115,7 @@ const schedule = {
     ['12:00 PM', 'Departure - Sack lunch available']
   ]
 };
+
 const teamColors = {
   Red: '#ef4444',
   Orange: '#f97316',
